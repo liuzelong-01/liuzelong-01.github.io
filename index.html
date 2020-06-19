@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body{background-image:url(image/bgimg.jpg) ; background-repeat:no-repeat; background-size:cover;}
+</style>
+<link href="beauty.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' 必须是Email地址.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' 必须是数字.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+</script>
+</head>
+<body>
+
+<h1>UP主之家</h1> <br>
+<h2>这里将提供给你最优质的up主推荐，快和我们一起进入up主之家吧！</h2><br>
+<br>
+<form id="form1" name="form1" method="post" action="">
+  <p>
+    <label for="zhanghao">账号：</label>
+    <input name="账号" type="text" id="zhanghao" onBlur="MM_validateForm('zhanghao','','RisEmail','mima','','RisNum');return document.MM_returnValue" />
+    是否填写完成：
+    <input name="denglu" type="submit" id="denglu" onClick="MM_validateForm('zhanghao','','RisEmail','mima','','RisNum');return document.MM_returnValue" value="确定" />
+  </p>
+  <p>密码：
+    <label for="mima"></label>
+    <input type="text" name="密码" id="mima" />
+  完成后请验证：
+  <input name="yanzheng" type="submit" id="yanzheng" onClick="MM_popupMsg('登录成功')" value="验证">
+  </p>
+  <p>&nbsp;</p>
+  
+</form>
+<div style="float:left ;width: 100px;">
+<h1>分区:</h1>
+<br>
+    <br>
+    <a class="fenquziti" href="Animation.html"> 动画区</a><br>
+    <br>
+    <br>
+    <a class="fenquziti" href="Game.html">游戏区</a><br>
+    <br>
+    <br>
+    <a class="fenquziti" href="MovieTV.html">影视区</a><br>
+    <br>
+    <br>
+    <a class="fenquziti" href="guichu.html">鬼畜区</a><br>
+    <br>
+    <br>
+    <br>
+    
+    <br>
+</div>
+<h1>评论区：</h1><h2>可以推荐你喜欢的up主，请不要人身攻击</h2>
+<div style="float:right;width:auto>
+
+<form action="" method="get"> 
+  <p>
+    <textarea name="plq" cols="120" rows="10"></textarea>
+  </p>
+   <input name="sent" type="button" id="sent" onClick="MM_popupMsg('发送成功，评论审核后将显示在网页上！')" value="发表评论">
+</form>
+
+
+</div>
+</body>
+</html>
