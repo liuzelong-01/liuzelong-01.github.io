@@ -7,8 +7,8 @@
 body{background-image:url(image/bgimg.jpg) ; background-repeat:no-repeat; background-size:cover;}
 </style>
 <link href="beauty.css" rel="stylesheet" type="text/css">
-<script src="dream.js">
-</script>
+<script src="dream.js"></script>
+
 <script>
 alert("欢迎访问up主之家，我们的网站将给你推荐每个up，通过挑选自己喜欢的up主并关注可以快速融入B站。因为新人入站后，网站推荐视频很杂，在看了一类视频后，会一直推送此类视频。但是关注up后，你可以每天收到不同类型的视频，优化你的使用体验。")
 </script>
@@ -74,32 +74,28 @@ function MM_popupMsg(msg) { //v1.0
   <p>&nbsp;</p>
   
 </form>
-<div style="float:left ;width: 100px;">
-<h1>分区:</h1>
-<br>
-    <br>
-    <a class="fenquziti" href="Animation.html"> 动画区</a><br>
-    <br>
-    <br>
-    <a class="fenquziti" href="Game.html">游戏区</a><br>
-    <br>
-    <br>
-    <a class="fenquziti" href="MovieTV.html">影视区</a><br>
-    <br>
-    <br>
-    <a class="fenquziti" href="guichu.html">鬼畜区</a><br>
-    <br>
-    <br>
-    <br>
-    
-    <br>
+<div style="float:left ;width: 200px;">
+<div class="nav">
+<ul>
+<li><h1 >分区</a></h1>
+        <div class="open">
+        <li><a href="Animation.html">动画分区</a></li>
+        <li><a href="MovieTV.html">影视分区</a></li>
+        <li><a href="Game.html">游戏分区</a></li>
+        <li><a href="guichu.html">鬼畜分区</a></li>
+        <li><a href="http:\\www.bilibili.com">哔哩哔哩干杯</a></li>
+        </div>
+</ul>
 </div>
-<h1>评论区：</h1><h2>可以推荐你喜欢的up主，请不要人身攻击</h2>
-<div style="float:right;width:auto>
 
+
+</div>
+
+<div style="float:right;width:400px" >
+<h1>评论区：</h1><br><h2>可以推荐你喜欢的up主，请不要人身攻击</h2>
 <form action="" method="get"> 
   <p>
-    <textarea name="plq" cols="120" rows="10"></textarea>
+    <textarea name="plq" cols="50" rows="20"></textarea>
   </p>
    <input name="sent" type="button" id="sent"  onClick="MM_popupMsg('发送成功，评论审核后将显示在网页上！')" value="发表评论">
 </form>
