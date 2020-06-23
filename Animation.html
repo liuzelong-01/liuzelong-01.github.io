@@ -106,5 +106,84 @@ p{font-family:"Lucida Console", Monaco, monospace;}
 <script type="text/javascript">
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
 </script>
+<div id="box">
+		
+		<input class="active" type="button" value=""></input>
+		<input type="button" value=""></input>
+		<input type="button" value=""></input>
+		<input type="button" value=""></input>
+		
+		<div class="display"><img src="image/1.jpg" /></div>
+		<div><img src="image/2.jpg" /></div>
+		<div><img src="image/3.jpg" /></div>
+		<div><img src="image/4.jpg" /></div>
+	</div>
+	<script>
+	window.onload = function()
+	{
+		var oBtn = document.getElementsByTagName('input');
+		var oBox = document.getElementById('box');
+		var oDiv = oBox.getElementsByTagName('div');		//取oBox下的div
+		var iNow = 0;
+		for(var i = 0;i < oBtn.length;i++){
+				
+				oBtn[i].index = i;
+				
+				oBtn[i].onclick = function()
+				{
+					for (var j = 0;j < oBtn.length;j++) {
+						oBtn[j].className = '';
+						oDiv[j].className = '';
+					}
+					this.className = 'active';
+					iNow = this.index;
+					oDiv[this.index].className = 'display';
+				}
+		}	
+		var timer = setInterval(next,3000);
+		oBox.onmouseover = function()					//停止和开始都是与大Box有关的
+		{
+			clearInterval(timer);
+		}
+		oBox.onmouseout = function()
+		{
+			timer = setInterval(next,3000);
+		}
+		var oPrev = document.getElementById('prev');
+		var oNext = document.getElementById('next');
+		oPrev.onclick = prev;
+		oNext.onclick = next;
+		function prev ()
+		{
+			iNow--;
+			if (iNow == -1){
+				
+				iNow = oBtn.length - 1;
+			}
+			tab();
+		}
+		function next()
+		{
+			
+			iNow++;
+			if (iNow == oBtn.length){
+				iNow = 0;
+			}
+			tab();		
+		}
+		function tab(){
+			for (var i =0;i<oBtn.length;i++){
+				oBtn[i].className = '';
+				oDiv[i].className = '';
+			}
+			oBtn[iNow].className = 'active';
+			oDiv[iNow].className = 'display';	
+		}
+		
+		
+		
+	}
+		
+	</script>
 </body>
 </html>
