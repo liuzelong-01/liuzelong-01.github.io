@@ -60,13 +60,13 @@ function MM_popupMsg(msg) { //v1.0
 <br>
 <form id="form1" name="form1" method="post" action="">
   <p>
-    <label for="zhanghao">账号：</label>
+    <label for="zhanghao">账号:</label>
     <input name="账号" type="text" id="zhanghao" onBlur="MM_validateForm('zhanghao','','RisEmail','mima','','RisNum');return document.MM_returnValue" />
     是否填写完成：
     <input name="denglu" type="submit" id="denglu" onClick="MM_validateForm('zhanghao','','RisEmail','mima','','RisNum');return document.MM_returnValue" value="确定" />
   </p>
-  <p>密码：
-    <label for="mima"></label>
+  <p>
+    <label for="mima">密码:</label>
     <input type="text" name="密码" id="mima" />
   完成后请验证：
   <input name="yanzheng" type="submit" id="yanzheng" onClick="MM_popupMsg('登录成功')" value="验证">
@@ -92,7 +92,7 @@ function MM_popupMsg(msg) { //v1.0
 </div>
 
 <div style="float:right;width:400px" >
-<h1>评论区：</h1><br><h2>可以推荐你喜欢的up主，请不要人身攻击</h2>
+<pl>评论区：</pl><br><h2>可以推荐你喜欢的up主，请不要人身攻击</h2>
 <form action="" method="get"> 
   <p>
     <textarea name="plq" cols="50" rows="20"></textarea>
